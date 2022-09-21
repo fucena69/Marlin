@@ -306,7 +306,7 @@ void menu_move() {
   #if E_MANUAL
 
     // The current extruder
-    //SUBMENU(MSG_MOVE_E, []{ _menu_move_distance_e_maybe(); });
+    //***SUBMENU(MSG_MOVE_E, []{ _menu_move_distance_e_maybe(); });
 
     #define SUBMENU_MOVE_E(N) SUBMENU_N(N, MSG_MOVE_EN, []{ _menu_move_distance(E_AXIS, []{ lcd_move_e(MenuItemBase::itemIndex); }, MenuItemBase::itemIndex); });
 
@@ -495,6 +495,7 @@ void menu_motion() {
   GCODES_ITEM(STR_SET_ORIGIN, F("G92 X0 Y0 Z0"));
   GCODES_ITEM(MSG_DISABLE_STEPPERS, F("M84"));
   GCODES_ITEM(MSG_DISABLE_STEPPERS_XY, F("M18 X Y"));
+  GCODES_ITEM(MSG_DISABLE_STEPPERS_Z, F("M18 Z"));
   END_MENU();
 }
 

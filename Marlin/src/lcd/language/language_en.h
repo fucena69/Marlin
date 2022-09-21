@@ -79,6 +79,7 @@ namespace Language_en {
   LSTR STR_SET_ORIGIN                     = _UxGT("Reset Coordinates");
   LSTR STR_SET_HOME_OFFSETS               = _UxGT("Save as Home");      
   LSTR MSG_DISABLE_STEPPERS_XY               = _UxGT("Disable XY ");   
+  LSTR MSG_DISABLE_STEPPERS_Z               = _UxGT("Disable Z ");   
 
   LSTR MSG_DEBUG_MENU                     = _UxGT("Debug Menu");
   LSTR MSG_PROGRESS_BAR_TEST              = _UxGT("Progress Bar Test");
