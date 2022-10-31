@@ -782,7 +782,7 @@
   #define INVERT_Y2_VS_Y_DIR        // Y2 direction signal is the opposite of Y
   //#define Y_DUAL_ENDSTOPS           // Y2 has its own endstop
   #if ENABLED(Y_DUAL_ENDSTOPS)
-    #define Y2_USE_ENDSTOP    _YMAX_  // Y2 endstop board plug. Don't forget to enable USE_*_PLUG.
+    //#define Y2_USE_ENDSTOP    _YMAX_  // Y2 endstop board plug. Don't forget to enable USE_*_PLUG.
     #define Y2_ENDSTOP_ADJUSTMENT  0  // Y2 offset relative to Y endstop
   #endif
 #endif
@@ -839,7 +839,7 @@
 
 //#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (linear=mm, rotational=°) Backoff from endstops after homing
 
-//#define QUICK_HOME                          // If G28 contains XY do a diagonal move first
+#define QUICK_HOME                          // If G28 contains XY do a diagonal move first
 //#define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
 //#define HOME_Z_FIRST                        // Home Z first. Requires a Z-MIN endstop (not a probe).
 //#define CODEPENDENT_XY_HOMING               // If X/Y can't home without homing Y/X first

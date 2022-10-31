@@ -392,41 +392,41 @@ void menu_motion() {
   if (TERN1(DELTA, all_axes_homed()))
     SUBMENU(MSG_MOVE_AXIS, menu_move);
 
-  // //
-  // // Auto Home
-  // //
-  // #if ENABLED(INDIVIDUAL_AXIS_HOMING_SUBMENU)
-  //   SUBMENU(MSG_HOMING, menu_home);
-  // #else
-  //   GCODES_ITEM(MSG_AUTO_HOME, FPSTR(G28_STR));
-  //   #if ENABLED(INDIVIDUAL_AXIS_HOMING_MENU)
-  //     GCODES_ITEM_N(X_AXIS, MSG_AUTO_HOME_A, F("G28X"));
-  //     #if HAS_Y_AXIS
-  //       GCODES_ITEM_N(Y_AXIS, MSG_AUTO_HOME_A, F("G28Y"));
-  //     #endif
-  //     #if HAS_Z_AXIS
-  //       GCODES_ITEM_N(Z_AXIS, MSG_AUTO_HOME_A, F("G28Z"));
-  //     #endif
-  //     #if HAS_I_AXIS
-  //       GCODES_ITEM_N(I_AXIS, MSG_AUTO_HOME_A, F("G28" STR_I));
-  //     #endif
-  //     #if HAS_J_AXIS
-  //       GCODES_ITEM_N(J_AXIS, MSG_AUTO_HOME_A, F("G28" STR_J));
-  //     #endif
-  //     #if HAS_K_AXIS
-  //       GCODES_ITEM_N(K_AXIS, MSG_AUTO_HOME_A, F("G28" STR_K));
-  //     #endif
-  //     #if HAS_U_AXIS
-  //       GCODES_ITEM_N(U_AXIS, MSG_AUTO_HOME_A, F("G28" STR_U));
-  //     #endif
-  //     #if HAS_V_AXIS
-  //       GCODES_ITEM_N(V_AXIS, MSG_AUTO_HOME_A, F("G28" STR_V));
-  //     #endif
-  //     #if HAS_W_AXIS
-  //       GCODES_ITEM_N(W_AXIS, MSG_AUTO_HOME_A, F("G28" STR_W));
-  //     #endif
-  //   #endif
-  // #endif
+  //
+  // Auto Home
+  //
+  #if ENABLED(INDIVIDUAL_AXIS_HOMING_SUBMENU)
+    SUBMENU(MSG_HOMING, menu_home);
+  #else
+  GCODES_ITEM(MSG_AUTO_HOME, F("G28XY"));
+   // #if ENABLED(INDIVIDUAL_AXIS_HOMING_MENU)
+    //  GCODES_ITEM_N(X_AXIS, MSG_AUTO_HOME_A, F("G28XY"));
+      // #if HAS_Y_AXIS
+      //   GCODES_ITEM_N(Y_AXIS, MSG_AUTO_HOME_A, F("G28Y"));
+      // #endif
+      // #if HAS_Z_AXIS
+      //   GCODES_ITEM_N(Z_AXIS, MSG_AUTO_HOME_A, F("G28Z"));
+      // #endif
+      // #if HAS_I_AXIS
+      //   GCODES_ITEM_N(I_AXIS, MSG_AUTO_HOME_A, F("G28" STR_I));
+      // #endif
+      // #if HAS_J_AXIS
+      //   GCODES_ITEM_N(J_AXIS, MSG_AUTO_HOME_A, F("G28" STR_J));
+      // #endif
+      // #if HAS_K_AXIS
+      //   GCODES_ITEM_N(K_AXIS, MSG_AUTO_HOME_A, F("G28" STR_K));
+      // #endif
+      // #if HAS_U_AXIS
+      //   GCODES_ITEM_N(U_AXIS, MSG_AUTO_HOME_A, F("G28" STR_U));
+      // #endif
+      // #if HAS_V_AXIS
+      //   GCODES_ITEM_N(V_AXIS, MSG_AUTO_HOME_A, F("G28" STR_V));
+      // #endif
+      // #if HAS_W_AXIS
+      //   GCODES_ITEM_N(W_AXIS, MSG_AUTO_HOME_A, F("G28" STR_W));
+      // #endif
+    //#endif
+  #endif
 
   //
   // Auto-calibration

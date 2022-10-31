@@ -84,10 +84,10 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+//#define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
-#define SHOW_CUSTOM_BOOTSCREEN
+//#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
 //#define CUSTOM_STATUS_SCREEN_IMAGE
@@ -944,8 +944,8 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -980,7 +980,7 @@
  *
  * :[2,3,4,5,6,7]
  */
-//#define ENDSTOP_NOISE_THRESHOLD 2
+#define ENDSTOP_NOISE_THRESHOLD 2
 
 // Check for stuck or disconnected endstops during homing moves.
 //#define DETECT_BROKEN_ENDSTOP
@@ -1467,7 +1467,7 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-//#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
+#define Z_HOMING_HEIGHT  10      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
 //#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
@@ -1487,8 +1487,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 300
-#define Y_BED_SIZE 300
+#define X_BED_SIZE 320
+#define Y_BED_SIZE 320
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1496,7 +1496,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 200
+#define Z_MAX_POS 80
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1881,7 +1881,7 @@
 #define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
 
 // Validate that endstops are triggered on homing moves
-#define VALIDATE_HOMING_ENDSTOPS
+//#define VALIDATE_HOMING_ENDSTOPS
 
 // @section calibrate
 
@@ -2298,7 +2298,7 @@
 //
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
 //
-//#define INDIVIDUAL_AXIS_HOMING_MENU
+#define INDIVIDUAL_AXIS_HOMING_MENU
 //#define INDIVIDUAL_AXIS_HOMING_SUBMENU
 
 //
@@ -2330,7 +2330,7 @@
 //
 // Note: Usually sold with a white PCB.
 //
-//#define REPRAP_DISCOUNT_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_SMART_CONTROLLER
 
 //
 // GT2560 (YHCB2004) LCD Display
@@ -2488,7 +2488,7 @@
 // RepRapDiscount FULL GRAPHIC Smart Controller
 // https://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
-#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // K.3D Full Graphic Smart Controller
